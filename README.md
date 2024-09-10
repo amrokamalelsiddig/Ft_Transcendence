@@ -39,3 +39,7 @@ Ft_Transcendence is a dynamic gaming platform designed for both individual and m
 ![alt text](<src/backend/staticfiles/Screenshot from 2024-09-10 19-59-17.png>) 
 ![alt text](<src/backend/staticfiles/Screenshot from 2024-09-10 20-00-16.png>) 
 ![alt text](<src/backend/staticfiles/Screenshot from 2024-09-10 20-06-55.png>)
+
+![alt text](<src/backend/staticfiles/Screencast from 2024-09-10 20-02-08(1).gif>)
+
+
