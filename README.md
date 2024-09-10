@@ -39,7 +39,7 @@ Ft_Transcendence is a dynamic gaming platform designed for both individual and m
 
 Security is a core consideration in Ft_Transcendence, ensuring both user safety and data integrity throughout the platform. Below are the key security features and practices:
 
-- **Input Sanitization:** To protect against Cross-Site Scripting (XSS) attacks, we have implemented middleware (`SanitizeJsonMiddleware`) that sanitizes all incoming JSON data, removing any malicious content such as HTML or JavaScript tags.
+- **Input Sanitization:** To defend against Cross-Site Scripting (XSS) attacks, we’ve implemented middleware (SanitizeJsonMiddleware) that cleans all incoming JSON data. Additionally, user inputs are validated on the frontend to further prevent malicious content like HTML or JavaScript tags from being submitted. This two-layered approach helps ensure security.
   
 - **Two-Factor Authentication (2FA):** Users can enable 2FA for an additional layer of security. This requires users to enter a second form of verification during the login process, protecting accounts from unauthorized access.
   
