@@ -1,111 +1,35 @@
 # Ft_Transcendence
 
+## Introduction
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-</head>
-<body>
+Ft_Transcendence is a dynamic gaming platform designed for both individual and multiplayer gaming experiences. This project leverages cutting-edge web technologies to provide a robust backend framework, comprehensive user management, and advanced features like remote authentication and two-factor authentication.
 
-<h2>Project Task Tracker</h2>
+## Features
 
-<table>
-  <thead>
-    <tr>
-      <th>Task</th>
-      <th>Module</th>
-      <th>Team Member</th>
-      <th>Progress Status</th>
-      <th>Deadline</th>
-      <th>Tested By</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Implement feature X</td>
-      <td>Endpoint API</td>
-      <td>Assigned to</td>
-      <td><span class="status-in-progress">In Progress</span></td>
-      <td>YYYY-MM-DD</td>
-      <td>Team Member 3</td>
-    </tr>
-    <!-- Add more rows by makeing new TR -->
-  </tbody>
-</table>
+- **Multi-Game Management:** Users can switch between different games, each with their own history and matchmaking system.
+- **Multiplayer Functionality:** Supports more than two players in the same game, enhancing group interactions.
+- **Advanced User Authentication:**
+  - **Standard Registration:** Allows users to register and manage their accounts using traditional username and password methods.
+  - **42 API Integration:** Offers registration through the 42 API for users who do not have an account. All basic information will be pulled from your 42 profile, streamlining the registration process. Users who already have an account can also use this method for authentication.
+  - **Two-Factor Authentication (2FA):** Enhances security by requiring a second form of verification.
+- **User History Tracking:** Maintains comprehensive logs of user activity and game history for personalized experiences.
+- **Social Features:**
+  - **Friend System:** Allows users to add other players as friends, enhancing the community aspect of the platform and enabling easier matchmaking and game invites.
 
+## Games Offered
 
-<h2>Modules index</h2>
+- **Classic Pong Game:**
+  - **Player Options:** Supports 2 or 3 players in a single game session.
+  - **Tournament Mode:** Offers a tournament setup that can accommodate up to 8 players in a knockout, or cup system, where winners advance to the next round.
 
+- **Tic Tac Toe:**
+  - **Player Configuration:** Game designed for 2 players.
+  - Both games feature user history tracking and utilize the matchmaking system for pairing competitors.
 
+## Technology Stack
 
-<table>
-  <thead>
-    <tr>
-      <th>Module</th>
-      <th>Type</th>
-      <th>Progress Status</th>
-      <th>Tested By</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Use a Framework as backend</td>
-      <td>Major</td>
-      <td>compeleted</td>
-      <td> **** </td>
-    </tr>
-    <tr>
-      <td>Standard user management, authentication, users across tournaments</td>
-      <td>Major</td>
-      <td>compeleted</td>
-      <td> **** </td>
-    </tr>
-    <tr>
-      <td>implementing a remote authentication</td>
-      <td>Major</td>
-      <td>compeleted</td>
-      <td> **** </td>
-    </tr>
-        <tr>
-      <td>Multiplayers (more than 2 in the same game)</td>
-      <td>Major</td>
-      <td>compeleted</td>
-      <td> **** </td>
-    </tr>
-        <tr>
-      <td>Add Another Game with User History and Matchmaking</td>
-      <td>Major</td>
-      <td>compeleted</td>
-      <td> **** </td>
-    </tr>
-        <tr>
-      <td>Use a front-end framework or toolkit</td>
-      <td>Minor</td>
-      <td>compeleted</td>
-      <td> **** </td>
-    </tr>
-        <tr>
-      <td>Implement Two-Factor Authentication (2FA) and JWT</td>
-      <td>Major</td>
-      <td>compeleted</td>
-      <td> **** </td>
-    </tr>
-    <tr>
-      <td>Use a database for the backend</td>
-      <td>Minor</td>
-      <td>compeleted</td>
-      <td> **** </td>
-    </tr>
-        <tr>
-      <td>Multiple language supports</td>
-      <td>Minor</td>
-      <td>Not started</td>
-      <td> **** </td>
-    </tr>
-    <!-- Add more rows by makeing new TR  -->
-  </tbody>
-</table>
-
-</body>
-</html>
+- **Backend:** Django
+- **Frontend:** JavaScript, HTML, CSS
+- **Authentication:** JWT, OAuth
+- **Database:** PostgreSQL
+- **Other Technologies:** Docker, Nginx, Bootstrap
