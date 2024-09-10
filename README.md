@@ -33,3 +33,10 @@ Ft_Transcendence is a dynamic gaming platform designed for both individual and m
 - **Authentication:** JWT, OAuth
 - **Database:** PostgreSQL
 - **Other Technologies:** Docker, Nginx, Bootstrap
+
+
+
+![alt text](<Screenshot from 2024-09-10 19-59-07.png>) 
+![alt text](<Screenshot from 2024-09-10 19-59-17.png>)
+![alt text](<Screenshot from 2024-09-10 20-00-16.png>)
+![alt text](<Screenshot from 2024-09-10 20-06-55.png>)
