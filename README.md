@@ -85,8 +85,6 @@ Security is a core consideration in Ft_Transcendence, ensuring both user safety 
 Before using Ft_Transcendence, ensure you have the following installed:
 
 - **Docker** and **Docker Compose**
-- **PostgreSQL** if not using Docker for the database
-- A valid SSL certificate if deploying with HTTPS
 
 ### Running the Application Locally
 
@@ -95,4 +93,3 @@ Before using Ft_Transcendence, ensure you have the following installed:
    git clone https://github.com/your-username/ft_transcendence.git
    cd ft_transcendence
    make
-   
