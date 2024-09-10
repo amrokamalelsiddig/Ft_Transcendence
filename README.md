@@ -20,7 +20,7 @@ Ft_Transcendence is a dynamic gaming platform designed for both individual and m
 
 - **Classic Pong Game:**
   - **Player Options:** Supports 2 or 3 players in a single game session.
-  - **Tournament Mode:** Offers a tournament setup that can accommodate up to 8 players in a knockout, or cup system, where winners advance to the next round.
+  - **Tournament Mode:** Offers a tournament setup that can accommodate up to 8 players in a knockout, where winners advance to the next round.
 
 - **Tic Tac Toe:**
   - **Player Configuration:** Game designed for 2 players.
