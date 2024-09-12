@@ -43,9 +43,9 @@ Security is a core consideration in **Ft_Transcendence**, ensuring both user saf
 
 - **JWT Authentication Middleware:** This custom middleware (`JWTAuthenticationMiddleware`) handles user authentication by verifying JSON Web Tokens (JWT) attached to each request. It checks the `Authorization` header or cookies for a valid JWT token. If the token is valid, the middleware decodes it, retrieves the user, and assigns them to the request. This middleware also protects sensitive endpoints by blocking access unless the user is authenticated, ensuring only authorized users can interact with secure parts of the application. Some endpoints (like `/api/login`, `/api/register`) are excluded from authentication requirements, allowing unauthenticated users to perform basic actions.
 
-<div style="text-align: center;">
-    <img src="src/backend/staticfiles/middleware.svg" alt="Middleware Diagram" style="width:50%;">
-</div>
+<p align="center">
+    <img src="src/backend/staticfiles/middleware.svg" alt="Middleware Diagram" width="50%">
+</p>
 
 - **Update Last Activity Middleware:** This middleware (`UpdateLastActivityMiddleware`) ensures that authenticated users' last activity timestamps are updated with every request. It helps monitor user engagement and can detect inactive users by comparing the current time to the expiration time of their JWT token. If the token is expired, the user’s account is deactivated, further enhancing session security.
 
