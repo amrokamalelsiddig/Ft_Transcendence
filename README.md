@@ -37,23 +37,28 @@ Ft_Transcendence is a dynamic gaming platform designed for both individual and m
 
 ## Security
 
-Security is a core consideration in Ft_Transcendence, ensuring both user safety and data integrity throughout the platform. Below are the key security features and practices:
+Security is a core consideration in **Ft_Transcendence**, ensuring both user safety and data integrity throughout the platform. Below are the key security features and custom middleware implemented to protect the platform:
 
-- **Input Sanitization:** To defend against Cross-Site Scripting (XSS) attacks, we’ve implemented middleware (SanitizeJsonMiddleware) that cleans all incoming JSON data. Additionally, user inputs are validated on the frontend to further prevent malicious content like HTML or JavaScript tags from being submitted. This two-layered approach helps ensure security.
-  
-- **Two-Factor Authentication (2FA):** Users can enable 2FA for an additional layer of security. This requires users to enter a second form of verification during the login process, protecting accounts from unauthorized access.
-  
-- **JWT and OAuth:** We use JSON Web Tokens (JWT) to secure authentication tokens and ensure that user sessions are properly authenticated. OAuth is implemented for remote authentication, allowing users to securely log in using third-party accounts (e.g., via 42 API).
-  
+- **Input Sanitization:** To defend against Cross-Site Scripting (XSS) attacks, we’ve implemented middleware (`SanitizeJsonMiddleware`) that sanitizes all incoming JSON data. Additionally, user inputs are validated on the frontend to prevent malicious content, such as HTML or JavaScript tags, from being submitted. This two-layered approach ensures comprehensive protection.
+
+- **JWT Authentication Middleware:** This custom middleware (`JWTAuthenticationMiddleware`) handles user authentication by verifying JSON Web Tokens (JWT) attached to each request. It checks the `Authorization` header or cookies for a valid JWT token. If the token is valid, the middleware decodes it, retrieves the user, and assigns them to the request. This middleware also protects sensitive endpoints by blocking access unless the user is authenticated, ensuring only authorized users can interact with secure parts of the application. Some endpoints (like `/api/login`, `/api/register`) are excluded from authentication requirements, allowing unauthenticated users to perform basic actions.
+
+![alt text](<src/backend/staticfiles/middleware.svg>)
+
+
+- **Update Last Activity Middleware:** This middleware (`UpdateLastActivityMiddleware`) ensures that authenticated users' last activity timestamps are updated with every request. It helps monitor user engagement and can detect inactive users by comparing the current time to the expiration time of their JWT token. If the token is expired, the user’s account is deactivated, further enhancing session security.
+
+- **Log Headers Middleware:** This simple middleware (`LogHeadersMiddleware`) logs all HTTP headers received with each request. It’s primarily used for debugging and monitoring purposes, but it also plays a role in security by providing insights into the structure and contents of incoming requests, making it easier to spot unusual or potentially malicious traffic patterns.
+
+- **OAuth and Two-Factor Authentication (2FA):** We implement OAuth for secure remote authentication, allowing users to log in using third-party accounts (e.g., via 42 API). Additionally, 2FA is enabled via email, requiring users to enter a verification code sent to their registered email address during the login process, adding an extra layer of security to protect accounts from unauthorized access.
+
 - **HTTPS Encryption:** All traffic between the client and server is encrypted using HTTPS, ensuring that sensitive information such as login credentials and user data are transmitted securely.
 
-- **Database Security:** PostgreSQL is configured with strict access controls, ensuring that only authorized users and services can access the database. Sensitive data, such as passwords, are hashed using industry-standard algorithms to protect against data breaches.
-  
 - **Rate Limiting:** Nginx is configured with request rate limiting to prevent brute-force attacks and denial-of-service (DoS) attacks by limiting the number of requests from a single IP address within a certain time frame.
-  
-- **Error Handling:** Detailed error messages are suppressed in production environments to avoid leaking sensitive system information, with proper logging in place to trace issues while keeping the system secure.
-  
-- **Secure Session Management:** We use secure session management techniques, ensuring that sessions are properly handled, invalidated upon logout, and protected from session hijacking or fixation attacks.
+
+By implementing these security measures, **Ft_Transcendence** offers a safe and reliable gaming environment for all users. Our custom middleware and other security features work together to provide robust protection for the platform.
+
+
 
 
 ## Sign up page 

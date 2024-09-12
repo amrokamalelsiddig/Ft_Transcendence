@@ -29,6 +29,7 @@ class JWTAuthenticationMiddleware(MiddlewareMixin):
             re.compile(r'^/api/verify_otp_login$'),
             re.compile(r'^/api/forgot_password_send_email$'),
             re.compile(r'^/api/reset_password/.+/$'),
+            re.compile(r'^/api/sanitize-test/.+/$')
         ]
 
     def __call__(self, request):
